@@ -33,7 +33,6 @@
 
   "remoteEnv": {
     "ASTRO_TELEMETRY_DISABLED": "1",
-    "TURBO_TELEMETRY_DISABLED": "1",
     "DO_NOT_TRACK": "1"
   },
 
