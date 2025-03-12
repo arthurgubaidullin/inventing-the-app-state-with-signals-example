@@ -29,7 +29,18 @@
         "vitest.explorer"
       ]
     }
-  }
+  },
+
+  "remoteEnv": {
+    "ASTRO_TELEMETRY_DISABLED": "1",
+    "TURBO_TELEMETRY_DISABLED": "1",
+    "DO_NOT_TRACK": "1"
+  },
+
+  "runArgs": [
+    "--name",
+    "inventing-the-app-state-with-signals-example-devcontainer"
+  ]
 
   // Uncomment to connect as root instead. More info: https://aka.ms/dev-containers-non-root.
   // "remoteUser": "root"
