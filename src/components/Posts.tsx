@@ -12,7 +12,7 @@ export const Posts = ({ posts }: { posts: PostsState }) => {
     <div class="grid gap-8">
       <h2 class="text-5xl">Posts</h2>
 
-      <ul>{listItems}</ul>
+      <ul class="list list-none">{listItems}</ul>
     </div>
   );
 };

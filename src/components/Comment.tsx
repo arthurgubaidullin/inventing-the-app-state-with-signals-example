@@ -3,10 +3,11 @@ import { EditCommentForm } from "./EditCommentForm";
 
 export const Comment = ({ comment }: { comment: CommentState }) => {
   return (
-    <div>
-      <h3>Comment</h3>
+    <div class="grid gap-4">
+      <h5 class="">Comment</h5>
+
       <p>{comment.data.value.content}</p>
-      <br />
+
       <EditCommentForm comment={comment} />
     </div>
   );

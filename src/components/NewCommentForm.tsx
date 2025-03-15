@@ -3,7 +3,7 @@ import type { CommentsState } from "../comments/state";
 export const NewCommentForm = ({ comments }: { comments: CommentsState }) => {
   return (
     <div class="grid gap-4">
-      <h4 class="text-xl">New Comment</h4>
+      <h4 class="">New Comment</h4>
 
       <form
         class="grid gap-4"
