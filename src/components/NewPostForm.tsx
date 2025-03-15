@@ -2,7 +2,7 @@ import type { PostsState } from "../posts/state";
 
 export const NewPostForm = ({ posts }: { posts: PostsState }) => {
   return (
-    <div class="grid gap-4 m-4">
+    <div class="grid gap-4">
       <h3 class="text-3xl">New Post Form</h3>
       <form
         class="grid gap-4"

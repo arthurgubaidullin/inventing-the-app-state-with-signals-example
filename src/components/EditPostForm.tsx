@@ -2,9 +2,10 @@ import type { PostState } from "../posts/state";
 
 export const EditPostForm = ({ post }: { post: PostState }) => {
   return (
-    <div>
-      <h4>Edit Post</h4>
+    <div class="grid gap-4">
+      <h4 class="text-3xl">Edit Post</h4>
       <form
+        class="grid gap-4"
         onSubmit={async (e) => {
           e.preventDefault();
 
@@ -19,11 +20,18 @@ export const EditPostForm = ({ post }: { post: PostState }) => {
           await post.updateContent(content);
         }}
       >
-        <label>
-          Content: <input name="content" type="text" required />
-        </label>
+        <fieldset className="fieldset">
+          <legend className="fieldset-legend">Content</legend>
+          <textarea
+            className="textarea h-24 w-full"
+            name="content"
+            required
+          ></textarea>
+        </fieldset>
 
-        <input type="submit" />
+        <div>
+          <input class="btn btn-primary" type="submit" />
+        </div>
       </form>
     </div>
   );
