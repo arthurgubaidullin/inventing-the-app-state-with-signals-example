@@ -1,10 +1,4 @@
-import type {
-  CommentData,
-  CommentId,
-  CommentsStorage,
-  NewCommentData,
-  PostId,
-} from "./state";
+import type { CommentData, CommentId, CommentsStorage, PostId } from "./state";
 
 export class InMemoryComments implements CommentsStorage {
   #data: Map<PostId, Map<CommentId, CommentData>> = new Map();
@@ -13,7 +7,7 @@ export class InMemoryComments implements CommentsStorage {
     return Array.from(this.#data.get(postId)?.values() ?? []);
   }
 
-  async createComment(newCommentData: NewCommentData) {
+  async createComment(newCommentData: CommentData) {
     const current = this.#data.get(newCommentData.postId);
 
     if (current) {

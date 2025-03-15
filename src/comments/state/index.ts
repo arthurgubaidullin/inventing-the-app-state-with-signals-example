@@ -4,3 +4,4 @@ export * from "./comment-id-type";
 export * from "./storage-type";
 export * from "./comments";
 export * from "./comments-type";
+export * from "./comment-type";

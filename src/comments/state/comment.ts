@@ -5,8 +5,11 @@ import { createCommentData, type CommentData } from "./comment-data";
 export class Comment implements CommentState {
   #data: Signal<CommentData>;
 
+  public readonly id: string;
+
   constructor(commentData: CommentData) {
     this.#data = signal(commentData);
+    this.id = commentData.id;
   }
 
   async updateContent(newContent: string): Promise<void> {

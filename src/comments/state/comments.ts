@@ -30,8 +30,12 @@ export class Comments implements CommentsState {
     this.#data.value = comments;
   }
 
-  async addPost(this: this, newComment: NewCommentData): Promise<void> {
-    const comment = new Comment(newComment);
+  async addComment(this: this, newComment: NewCommentData): Promise<void> {
+    const comment = new Comment({
+      id: crypto.randomUUID(),
+      postId: this.postId,
+      content: newComment.content,
+    });
 
     this.#data.value = this.#data.value.concat(comment);
   }

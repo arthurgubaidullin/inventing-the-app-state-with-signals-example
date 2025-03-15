@@ -5,8 +5,6 @@ export interface CommentData {
 }
 
 export interface NewCommentData {
-  readonly id: string;
-  readonly postId: string;
   readonly content: string;
 }
 
