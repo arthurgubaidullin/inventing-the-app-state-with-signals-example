@@ -33,7 +33,7 @@ export const EditCommentForm = ({ comment }: { comment: CommentState }) => {
         </fieldset>
 
         <div>
-          <input type="submit" />
+          <input class="btn" type="submit" />
         </div>
       </form>
     </div>
