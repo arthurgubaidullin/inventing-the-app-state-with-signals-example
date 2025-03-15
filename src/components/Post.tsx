@@ -18,9 +18,14 @@ export const Post = ({ post }: { post: PostState }) => {
         </div>
       </div>
 
-      <Comments comments={post.comments} />
-
-      <NewCommentForm comments={post.comments} />
+      <div class="grid gap-4 grid-cols-5">
+        <div class="col-span-3">
+          <Comments comments={post.comments} />
+        </div>
+        <div class="col-span-2">
+          <NewCommentForm comments={post.comments} />
+        </div>
+      </div>
     </div>
   );
 };
