@@ -6,10 +6,12 @@ import type { CommentsState } from "../../comments/state";
 export class Post implements PostState {
   #data: Signal<PostData>;
   public readonly comments: CommentsState;
+  public readonly id: string;
 
   constructor(comments: CommentsState, postData: PostData) {
     this.#data = signal(postData);
     this.comments = comments;
+    this.id = postData.id;
   }
 
   async updateContent(newContent: string): Promise<void> {
