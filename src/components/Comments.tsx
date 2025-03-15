@@ -14,8 +14,8 @@ export const Comments = ({ comments }: { comments: CommentsState }) => {
   ));
 
   return (
-    <div>
-      <h4>Comments</h4>
+    <div class="grid gap-4">
+      <h4 class="text-xl">Comments</h4>
 
       <ul>{listItems}</ul>
     </div>
