@@ -9,7 +9,7 @@ export const Posts = ({ posts }: { posts: PostsState }) => {
   ));
 
   return (
-    <div class="grid gap-8">
+    <div class="grid gap-8 m-8">
       <h2 class="text-5xl">Posts</h2>
 
       <ul>{listItems}</ul>

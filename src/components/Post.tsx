@@ -5,15 +5,21 @@ import { NewCommentForm } from "./NewCommentForm";
 
 export const Post = ({ post }: { post: PostState }) => {
   return (
-    <div>
-      <h3>Post</h3>
-      <p>{post.data.value.content}</p>
-      <br />
-      <EditPostForm post={post} />
-      <br />
+    <div class="grid gap-4">
+      <div class="grid gap-4 grid-cols-5">
+        <div class="col-span-3 flex flex-col gap-4">
+          <h3 class="text-3xl">Post</h3>
+
+          <p class="flex-1">{post.data.value.content}</p>
+        </div>
+
+        <div class="col-span-2">
+          <EditPostForm post={post} />
+        </div>
+      </div>
 
       <Comments comments={post.comments} />
-      <br />
+
       <NewCommentForm comments={post.comments} />
     </div>
   );
