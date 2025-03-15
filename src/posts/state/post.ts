@@ -1,12 +1,15 @@
 import { signal, type ReadonlySignal, type Signal } from "@preact/signals";
 import { createPostData, type PostData } from "./post-data";
 import type { PostState } from "./post-type";
+import type { CommentsState } from "../../comments/state";
 
 export class Post implements PostState {
   #data: Signal<PostData>;
+  public readonly comments: CommentsState;
 
-  constructor(postData: PostData) {
+  constructor(comments: CommentsState, postData: PostData) {
     this.#data = signal(postData);
+    this.comments = comments;
   }
 
   async updateContent(newContent: string): Promise<void> {
