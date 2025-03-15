@@ -8,7 +8,7 @@ export const Comments = ({ comments }: { comments: CommentsState }) => {
   }, [comments.fetch]);
 
   const listItems = comments.data.value.map((comment) => (
-    <li key={comment.id} class="py-4">
+    <li key={comment.id}>
       <Comment comment={comment} />
     </li>
   ));
@@ -17,7 +17,7 @@ export const Comments = ({ comments }: { comments: CommentsState }) => {
     <div class="grid gap-4">
       <h4 class="text-xl">Comments</h4>
 
-      <ul class="list list-none">{listItems}</ul>
+      <ul class="list list-none gap-4">{listItems}</ul>
     </div>
   );
 };
