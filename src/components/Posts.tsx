@@ -8,5 +8,11 @@ export const Posts = ({ posts }: { posts: PostsState }) => {
     </li>
   ));
 
-  return <ul>{listItems}</ul>;
+  return (
+    <div>
+      <h2>Posts</h2>
+
+      <ul>{listItems}</ul>
+    </div>
+  );
 };

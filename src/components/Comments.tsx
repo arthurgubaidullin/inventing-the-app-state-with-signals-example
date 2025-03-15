@@ -13,5 +13,11 @@ export const Comments = ({ comments }: { comments: CommentsState }) => {
     </li>
   ));
 
-  return <ul>{listItems}</ul>;
+  return (
+    <div>
+      <h4>Comments</h4>
+
+      <ul>{listItems}</ul>
+    </div>
+  );
 };
