@@ -34,7 +34,9 @@ export class Posts implements PostsState {
   }
 
   async addPost(this: this, newPost: NewPostData): Promise<void> {
-    const post = new Post(this.#comments(newPost.id), newPost);
+    const id = crypto.randomUUID();
+
+    const post = new Post(this.#comments(id), { ...newPost, id });
 
     this.#data.value = this.#data.value.concat(post);
   }
