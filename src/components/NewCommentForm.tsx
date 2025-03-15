@@ -2,26 +2,40 @@ import type { CommentsState } from "../comments/state";
 
 export const NewCommentForm = ({ comments }: { comments: CommentsState }) => {
   return (
-    <form
-      onSubmit={async (e) => {
-        e.preventDefault();
+    <div class="grid gap-4">
+      <h4 class="text-xl">New Comment</h4>
 
-        const fd = new FormData(e.currentTarget);
+      <form
+        class="grid gap-4"
+        onSubmit={async (e) => {
+          e.preventDefault();
 
-        const content = fd.get("content");
+          const fd = new FormData(e.currentTarget);
 
-        if (typeof content !== "string") {
-          return;
-        }
+          const content = fd.get("content");
 
-        await comments.addComment({ content });
-      }}
-    >
-      <label>
-        Content: <input name="content" type="text" required />
-      </label>
+          if (typeof content !== "string") {
+            return;
+          }
 
-      <input type="submit" />
-    </form>
+          await comments.addComment({ content });
+        }}
+      >
+        <fieldset className="fieldset">
+          <legend className="fieldset-legend">What is your comment?</legend>
+          <input
+            type="text"
+            name="content"
+            className="input"
+            placeholder="Type here"
+            required
+          />
+        </fieldset>
+
+        <div>
+          <input type="submit" class="btn btn-primary" />
+        </div>
+      </form>
+    </div>
   );
 };

@@ -2,9 +2,11 @@ import type { CommentState } from "../comments/state";
 
 export const EditCommentForm = ({ comment }: { comment: CommentState }) => {
   return (
-    <div>
-      <h4>Edit Comment</h4>
+    <div class="grid gap-4">
+      <h4 class="text-xl">Edit Comment</h4>
+
       <form
+        class="grid gap-4"
         onSubmit={async (e) => {
           e.preventDefault();
 
@@ -19,12 +21,21 @@ export const EditCommentForm = ({ comment }: { comment: CommentState }) => {
           await comment.updateContent(content);
         }}
       >
-        <label>
-          Content: <input name="content" type="text" required />
-        </label>
+        <fieldset className="fieldset">
+          <legend className="fieldset-legend">What is your comment?</legend>
+          <input
+            type="text"
+            name="content"
+            className="input"
+            placeholder="Type here"
+            required
+          />
+        </fieldset>
 
-        <input type="submit" />
-      </form>{" "}
+        <div>
+          <input type="submit" />
+        </div>
+      </form>
     </div>
   );
 };
