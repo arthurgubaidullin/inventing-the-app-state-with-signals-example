@@ -17,5 +17,8 @@
     "preact": "^10.26.4",
     "tailwindcss": "^4.0.14",
     "typescript": "^5.8.2"
+  },
+  "devDependencies": {
+    "daisyui": "^5.0.4"
   }
 }
