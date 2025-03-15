@@ -2,26 +2,37 @@ import type { PostsState } from "../posts/state";
 
 export const NewPostForm = ({ posts }: { posts: PostsState }) => {
   return (
-    <form
-      onSubmit={async (e) => {
-        e.preventDefault();
+    <div class="grid gap-4 m-4">
+      <h3 class="text-3xl">New Post Form</h3>
+      <form
+        class="grid gap-4"
+        onSubmit={async (e) => {
+          e.preventDefault();
 
-        const fd = new FormData(e.currentTarget);
+          const fd = new FormData(e.currentTarget);
 
-        const content = fd.get("content");
+          const content = fd.get("content");
 
-        if (typeof content !== "string") {
-          return;
-        }
+          if (typeof content !== "string") {
+            return;
+          }
 
-        await posts.addPost({ content });
-      }}
-    >
-      <label>
-        Content: <input name="content" type="text" required />
-      </label>
+          await posts.addPost({ content });
+        }}
+      >
+        <fieldset className="fieldset">
+          <legend className="fieldset-legend">Content</legend>
+          <textarea
+            className="textarea h-24 w-full"
+            name="content"
+            required
+          ></textarea>
+        </fieldset>
 
-      <input type="submit" />
-    </form>
+        <div>
+          <input class="btn btn-primary" type="submit" />
+        </div>
+      </form>
+    </div>
   );
 };
