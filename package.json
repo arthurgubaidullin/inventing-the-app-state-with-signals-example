@@ -12,8 +12,10 @@
     "@astrojs/check": "^0.9.4",
     "@astrojs/preact": "^4.0.5",
     "@preact/signals": "^2.0.1",
+    "@tailwindcss/vite": "^4.0.14",
     "astro": "^5.5.2",
     "preact": "^10.26.4",
+    "tailwindcss": "^4.0.14",
     "typescript": "^5.8.2"
   }
 }
