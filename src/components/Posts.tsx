@@ -9,8 +9,8 @@ export const Posts = ({ posts }: { posts: PostsState }) => {
   ));
 
   return (
-    <div>
-      <h2>Posts</h2>
+    <div class="grid gap-8">
+      <h2 class="text-5xl">Posts</h2>
 
       <ul>{listItems}</ul>
     </div>
