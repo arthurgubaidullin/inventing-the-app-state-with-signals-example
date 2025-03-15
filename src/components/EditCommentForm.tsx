@@ -3,7 +3,7 @@ import type { CommentState } from "../comments/state";
 export const EditCommentForm = ({ comment }: { comment: CommentState }) => {
   return (
     <div>
-      <h3>Edit Comment</h3>
+      <h4>Edit Comment</h4>
       <form
         onSubmit={async (e) => {
           e.preventDefault();
