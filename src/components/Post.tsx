@@ -7,9 +7,7 @@ export const Post = ({ post }: { post: PostState }) => {
   return (
     <div class="grid gap-4">
       <div class="grid gap-4 grid-cols-5">
-        <div class="col-span-3 flex flex-col gap-4">
-          <h3 class="text-3xl">Post</h3>
-
+        <div class="col-span-3 flex flex-col gap-4 p-4 shadow">
           <p class="flex-1">{post.data.value.content}</p>
         </div>
 
