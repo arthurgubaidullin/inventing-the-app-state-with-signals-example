@@ -11,10 +11,10 @@ const App = () => {
   }, [appState.posts.fetch]);
 
   return (
-    <div>
-      <Posts posts={appState.posts} />
-      <hr />
+    <div class="grid gap-8 m-8">
       <NewPostForm posts={appState.posts} />
+
+      <Posts posts={appState.posts} />
     </div>
   );
 };
