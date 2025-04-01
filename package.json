@@ -19,6 +19,6 @@
     "typescript": "^5.8.2"
   },
   "devDependencies": {
-    "daisyui": "^5.0.4"
+    "daisyui": "^5.0.9"
   }
 }
